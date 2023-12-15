@@ -1,0 +1,12 @@
+[taurus.server.http]
+    Host = "0.0.0.0"
+    Port = 8090
+[taurus.log.default]
+    Level = "debug"
+    FileName = "./taurus.log"
+    MaxBackups = 1
+    MaxSizeInMB = 10 #dd
+    Compress = true
+    LocalTime = true
+[database.sqlite]
+    DB = "base.db"
