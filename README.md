@@ -2,15 +2,16 @@
 ## Taurus  [![GoDoc](https://pkg.go.dev/badge/github.com/eric-tech01/taurus)](https://pkg.go.dev/github.com/eric-tech01/taurus@v0.1.0)
 
 
-## Introduction
-Simplify and Accelerate Your Development Process.
-Taurus is designed to provide developers with a simplified and efficient solution for building HTTP services and leveraging various utility libraries. With our framework, you can embark on rapid development journeys, ensuring both simplicity and efficiency throughout the entire process.
-
      _(_____)_
     |__.___.__|
         | |    
         | | 
         |_|       
+
+## Introduction
+Simplify and Accelerate Your Development Process.
+Taurus is designed to provide developers with a simplified and efficient solution for building HTTP services and leveraging various utility libraries. With our framework, you can embark on rapid development journeys, ensuring both simplicity and efficiency throughout the entire process.
+
   
 ## Documentation
 To be updated...
