@@ -5,6 +5,8 @@ import (
 	"time"
 
 	log "github.com/eric-tech01/simple-log"
+
+	sjson "github.com/eric-tech01/simple-json"
 	"github.com/eric-tech01/taurus"
 	"github.com/eric-tech01/taurus/server"
 	"github.com/gin-gonic/gin"
@@ -24,11 +26,29 @@ func main() {
 	}
 	eng.Run()
 }
+
+type PostStruct struct {
+	Level int `json:"level"`
+}
+
 func (eng *Engine) serverHttp() error {
 	fmt.Println("start server http")
-
 	s := server.New()
+
 	diag := s.Group("/taurus/diagnoise")
+
+	diag.POST("/setLevel", func(ctx *gin.Context) {
+		l := &PostStruct{}
+		if err := ctx.Bind(l); err != nil {
+			log.Error(err)
+			return
+		}
+		rsp := sjson.New()
+		rsp.Set("level", l.Level)
+		log.Infof("set level %d", l.Level)
+		ctx.JSON(200, rsp)
+	})
+
 	diag.GET("/status", func(ctx *gin.Context) {
 		ctx.JSON(200, "normal")
 	})
