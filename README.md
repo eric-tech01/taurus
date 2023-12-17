@@ -1,4 +1,6 @@
 
+## Taurus  [![GoDoc](https://pkg.go.dev/badge/github.com/eric-tech01/taurus)](https://pkg.go.dev/github.com/eric-tech01/taurus@v0.1.0)
+
 
 ## Introduction
 Simplify and Accelerate Your Development Process.
