@@ -17,7 +17,7 @@ To be updated...
 - Go version >= 1.18
 
 ## Quick Start
-1.  Toml file
+ 1.  Config file:
 ```
 [taurus.server.http]
     Host = "0.0.0.0"
@@ -105,6 +105,11 @@ func (eng *Engine) printLog() error {
 	}()
 	return nil
 }
+```
+
+3. Run code
+```
+ go run ./main.go --config=config.toml
 ```
 
 ## Bugs and Feedback
