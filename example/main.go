@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"time"
 
-	log "github.com/eric-tech01/simple-log"
-
 	sjson "github.com/eric-tech01/simple-json"
+	log "github.com/eric-tech01/simple-log"
 	"github.com/eric-tech01/taurus"
+	conf "github.com/eric-tech01/taurus/pkg/conf"
 	"github.com/eric-tech01/taurus/server"
 	"github.com/gin-gonic/gin"
 )
@@ -43,6 +43,8 @@ func (eng *Engine) serverHttp() error {
 			log.Error(err)
 			return
 		}
+		conf.Set("taurus_log_default.Level", "info")
+		conf.Flush()
 		rsp := sjson.New()
 		rsp.Set("level", l.Level)
 		log.Infof("set level %d", l.Level)

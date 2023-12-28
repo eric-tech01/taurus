@@ -17,7 +17,7 @@ type Server struct {
 }
 
 func New() *Server {
-	config := &Config{Host: conf.GetString("taurus.server.http.Host"), Port: conf.GetInt("taurus.server.http.Port")}
+	config := &Config{Host: conf.GetString("taurus_server_http.Host"), Port: conf.GetInt("taurus_server_http.Port")}
 	s := &Server{Engine: gin.New(), config: config}
 	return s
 }
