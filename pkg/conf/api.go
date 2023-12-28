@@ -1,6 +1,8 @@
 package conf
 
-import "github.com/spf13/cast"
+import (
+	"github.com/pelletier/go-toml"
+)
 
 var defaultConfiguration = New()
 
@@ -47,15 +49,20 @@ func Flush() error {
 
 // GetString returns the value associated with the key as a string with default defaultConfiguration.
 func GetString(key string) string {
-	return cast.ToString(Get(key))
+	return Get(key).(string)
 }
 
 // GetInt returns the value associated with the key as an integer with default defaultConfiguration.
 func GetInt(key string) int {
-	return cast.ToInt(Get(key))
+	return int(Get(key).(int64))
+}
+
+// GetInt returns the value associated with the key as an integer with default defaultConfiguration.
+func GetInt64(key string) int64 {
+	return Get(key).(int64)
 }
 
 // GetStringMap returns the value associated with the key as a map of interfaces with default defaultConfiguration.
 func GetStringMap(key string) map[string]interface{} {
-	return cast.ToStringMap(Get(key))
+	return Get(key).(*toml.Tree).ToMap()
 }

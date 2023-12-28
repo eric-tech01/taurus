@@ -12,7 +12,8 @@ import (
 )
 
 func init() {
-
+	//register log hook
+	initLogger()
 	flag.Register(&flag.StringFlag{Name: "config", Usage: "--config=config.toml", Default: "config.toml", Action: func(key string, fs *flag.FlagSet) {
 		configAddr := fs.String(key)
 		log.Printf("read config: %s", configAddr)
@@ -22,9 +23,6 @@ func init() {
 		}
 	}})
 	flag.Parse()
-
-	//register log hook
-	initLogger()
 }
 
 func initLogger() {
