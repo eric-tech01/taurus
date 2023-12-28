@@ -31,7 +31,7 @@ func initLogger() {
 	conf.OnLoaded(func(c *conf.Configuration) {
 		log.Println("load logger start")
 		defer log.Println("load logger finish")
-		m := conf.GetStringMap("taurus.log.default")
+		m := conf.GetStringMap("taurus_log_default")
 		if len(m) == 0 {
 			log.Printf("has no log config, ignore load")
 			return

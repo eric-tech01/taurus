@@ -1,31 +1,33 @@
-
-## Taurus  [![GoDoc](https://pkg.go.dev/badge/github.com/eric-tech01/taurus)](https://pkg.go.dev/github.com/eric-tech01/taurus@v0.1.1)
-
+## Taurus [![GoDoc](https://pkg.go.dev/badge/github.com/eric-tech01/taurus)](https://pkg.go.dev/github.com/eric-tech01/taurus@v0.1.1)
 
      _(_____)_
     |__.___.__|
-        | |    
-        | | 
-        |_|       
+        | |
+        | |
+        |_|
 
 ## Introduction
+
 Simplify and Accelerate Your Development Process.
 Taurus is designed to provide developers with a simplified and efficient solution for building HTTP services and leveraging various utility libraries. With our framework, you can embark on rapid development journeys, ensuring both simplicity and efficiency throughout the entire process.
 
-  
 ## Documentation
+
 To be updated...
 
 ## Requirements
+
 - Go version >= 1.18
 
 ## Quick Start
- 1.  Config file:
+
+1.  Config file:
+
 ```
-[taurus.server.http]
+[taurus_server_http]
     Host = "0.0.0.0"
     Port = 8090
-[taurus.log.default]
+[taurus_log_default]
     Level = "debug"
     FileName = "./taurus.log"
     MaxBackups = 1
@@ -35,6 +37,7 @@ To be updated...
 ```
 
 2. Example code:
+
 ```
 package main
 
@@ -111,6 +114,7 @@ func (eng *Engine) printLog() error {
 ```
 
 3. Run code
+
 ```
  go run ./main.go --config=config.toml
 ```
