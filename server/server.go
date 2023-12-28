@@ -7,7 +7,7 @@ import (
 
 	slog "github.com/eric-tech01/simple-log"
 
-	conf "github.com/eric-tech01/simple-conf"
+	"github.com/eric-tech01/taurus/pkg/conf"
 	"github.com/gin-gonic/gin"
 )
 

@@ -6,7 +6,6 @@ require (
 	github.com/BurntSushi/toml v1.3.2
 	github.com/alibaba/sentinel-golang v1.0.4
 	github.com/douyu/jupiter v0.11.13
-	github.com/eric-tech01/simple-conf v0.0.0-20231214074719-2e0aafb6d79a
 	github.com/eric-tech01/simple-log v1.0.2
 	github.com/fatih/color v1.16.0
 	github.com/gin-gonic/gin v1.9.1

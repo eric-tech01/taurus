@@ -3,8 +3,6 @@ package gorm
 import (
 	"time"
 
-	cfg "github.com/eric-tech01/simple-conf"
-	slog "github.com/eric-tech01/simple-log"
 	"github.com/spf13/cast"
 	"gorm.io/gorm"
 )
@@ -19,9 +17,9 @@ func RawConfig(key string) *Config {
 	config := DefaultConfig()
 	config.Name = key
 
-	if err := cfg.UnmarshalKey(key, &config, cfg.TagName("toml")); err != nil {
-		slog.Panic("unmarshal config ", err, key)
-	}
+	// if err := cfg.UnmarshalKey(key, &config, cfg.TagName("toml")); err != nil {
+	// 	slog.Panic("unmarshal config ", err, key)
+	// }
 
 	return config
 }

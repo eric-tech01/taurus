@@ -8,9 +8,7 @@ import (
 	"github.com/eric-tech01/taurus/utils"
 	"github.com/sirupsen/logrus"
 
-	conf "github.com/eric-tech01/simple-conf"
-	file_datasource "github.com/eric-tech01/simple-conf/datasource/file"
-	"github.com/pelletier/go-toml"
+	conf "github.com/eric-tech01/taurus/pkg/conf"
 )
 
 func init() {
@@ -18,12 +16,9 @@ func init() {
 	flag.Register(&flag.StringFlag{Name: "config", Usage: "--config=config.toml", Default: "config.toml", Action: func(key string, fs *flag.FlagSet) {
 		configAddr := fs.String(key)
 		log.Printf("read config: %s", configAddr)
-		provider, err := file_datasource.NewDataSource(configAddr, false)
+		err := conf.Load(configAddr)
 		if err != nil {
 			log.Fatalf("build datasource[%s] failed: %v", configAddr, err)
-		}
-		if err := conf.LoadFromDataSource(provider, toml.Unmarshal); err != nil {
-			panic(err)
 		}
 	}})
 	flag.Parse()
