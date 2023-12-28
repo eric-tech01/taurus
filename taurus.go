@@ -43,10 +43,9 @@ func (app *Application) printBanner() error {
 	}
 
 	const banner = `
-     _________ 
-    |____ ____|
-        | |   
-        | | 
+     _(_____)_
+    |__.___.__|
+        | |    
         | | 
         |_|       
 
