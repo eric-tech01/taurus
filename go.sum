@@ -78,14 +78,10 @@ github.com/edsrzf/mmap-go v1.0.0/go.mod h1:YO35OhQPt3KJa3ryjFM5Bs14WD66h8eGKpfaB
 github.com/envoyproxy/go-control-plane v0.6.9/go.mod h1:SBwIajubJHhxtWwsL9s8ss4safvEdbitLhGGK48rN6g=
 github.com/envoyproxy/go-control-plane v0.9.1-0.20191026205805-5f8ba28d4473/go.mod h1:YTl/9mNaCwkRvm6d1a2C3ymFceY/DCBVvsKhRF0iEA4=
 github.com/envoyproxy/protoc-gen-validate v0.1.0/go.mod h1:iSmxcyjqTsJpI2R4NaDN7+kN2VEUnK/pcBlmesArF7c=
-github.com/eric-tech01/simple-file v0.0.0-20231213063027-65b0303ff9c5 h1:K2crz2C5VaKWGKRTKjhtMhCS5tJFdUDQ/kE/ddHfbf8=
-github.com/eric-tech01/simple-file v0.0.0-20231213063027-65b0303ff9c5/go.mod h1:RJVH1lJM5ZeRuOcZKBlWNg1JkG4TMpi7N1fbGKdvP3o=
 github.com/eric-tech01/simple-json v0.0.0-20231129083655-b72030e2087a h1:atQFR4jSertLRHWCQNbWQNO5fPc8Fh4kdkadmN7sFe0=
 github.com/eric-tech01/simple-json v0.0.0-20231129083655-b72030e2087a/go.mod h1:C99IsnGogJhzpiw+tVrnjuy7u7Eza6q36TQ8Bt7p5Rs=
 github.com/eric-tech01/simple-log v1.0.2 h1:AywzWqVf9I1myPcaiPze7VTEqykEzHr9C2VrYx5Temw=
 github.com/eric-tech01/simple-log v1.0.2/go.mod h1:fKUsCBF/tWRvZ1a95IghCb+p8FmycuqGXjlHMmwBw/M=
-github.com/eric-tech01/simple-utils v0.0.0-20231213062049-de335283e5ac h1:x2oJSiFU15MLS+N2dIJMaSLCY5o+6raYQjR7CYYyDKM=
-github.com/eric-tech01/simple-utils v0.0.0-20231213062049-de335283e5ac/go.mod h1:QHL1H2hhiyorO342aojCClWOI5o0qzuqBNL3IRqE210=
 github.com/fatih/color v1.7.0/go.mod h1:Zm6kSWBoL9eyXnKyktHP6abPY2pDugNf5KwzbycvMj4=
 github.com/fatih/color v1.16.0 h1:zmkK9Ngbjj+K0yRhTVONQh1p/HknKYSlNT+vZCzyokM=
 github.com/fatih/color v1.16.0/go.mod h1:fL2Sau1YI5c0pdGEVCbKQbLXB6edEj1ZgiY4NijnWvE=

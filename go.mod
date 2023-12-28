@@ -5,6 +5,7 @@ go 1.18
 require (
 	github.com/alibaba/sentinel-golang v1.0.4
 	github.com/douyu/jupiter v0.11.13
+	github.com/eric-tech01/simple-json v0.0.0-20231129083655-b72030e2087a
 	github.com/eric-tech01/simple-log v1.0.2
 	github.com/fatih/color v1.16.0
 	github.com/gin-gonic/gin v1.9.1
@@ -32,8 +33,6 @@ require (
 	github.com/coreos/go-semver v0.3.0 // indirect
 	github.com/coreos/go-systemd/v22 v22.3.2 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
-	github.com/eric-tech01/simple-file v0.0.0-20231213063027-65b0303ff9c5 // indirect
-	github.com/eric-tech01/simple-utils v0.0.0-20231213062049-de335283e5ac // indirect
 	github.com/gabriel-vasile/mimetype v1.4.2 // indirect
 	github.com/gin-contrib/sse v0.1.0 // indirect
 	github.com/go-logr/logr v1.3.0 // indirect
