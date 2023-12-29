@@ -6,6 +6,7 @@ import (
 
 	sjson "github.com/eric-tech01/simple-json"
 	log "github.com/eric-tech01/simple-log"
+	version "github.com/eric-tech01/simple-version"
 	"github.com/eric-tech01/taurus"
 	conf "github.com/eric-tech01/taurus/pkg/conf"
 	"github.com/eric-tech01/taurus/server"
@@ -55,7 +56,8 @@ func (eng *Engine) serverHttp() error {
 		ctx.JSON(200, "normal")
 	})
 	diag.GET("/version", func(ctx *gin.Context) {
-		ctx.JSON(200, "normal")
+		v := version.GetVersion()
+		ctx.JSON(200, v)
 	})
 
 	return eng.Serve(*s)

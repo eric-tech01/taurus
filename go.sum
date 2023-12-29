@@ -82,6 +82,8 @@ github.com/eric-tech01/simple-json v0.0.0-20231129083655-b72030e2087a h1:atQFR4j
 github.com/eric-tech01/simple-json v0.0.0-20231129083655-b72030e2087a/go.mod h1:C99IsnGogJhzpiw+tVrnjuy7u7Eza6q36TQ8Bt7p5Rs=
 github.com/eric-tech01/simple-log v1.0.2 h1:AywzWqVf9I1myPcaiPze7VTEqykEzHr9C2VrYx5Temw=
 github.com/eric-tech01/simple-log v1.0.2/go.mod h1:fKUsCBF/tWRvZ1a95IghCb+p8FmycuqGXjlHMmwBw/M=
+github.com/eric-tech01/simple-version v0.0.0-20231228163504-c32e357446d3 h1:Tlg+gKK4Jqx8sQXu2Zpoxh7VYIOq1fbZXN3gam/Eivs=
+github.com/eric-tech01/simple-version v0.0.0-20231228163504-c32e357446d3/go.mod h1:F0recsGptBVsj4nBh5ieIYM7xkL+6AoY12sa/2QFIc8=
 github.com/fatih/color v1.7.0/go.mod h1:Zm6kSWBoL9eyXnKyktHP6abPY2pDugNf5KwzbycvMj4=
 github.com/fatih/color v1.16.0 h1:zmkK9Ngbjj+K0yRhTVONQh1p/HknKYSlNT+vZCzyokM=
 github.com/fatih/color v1.16.0/go.mod h1:fL2Sau1YI5c0pdGEVCbKQbLXB6edEj1ZgiY4NijnWvE=

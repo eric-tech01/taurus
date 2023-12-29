@@ -1,2 +1,4 @@
 
 .vscode
+example/logs
+example/*.exe
