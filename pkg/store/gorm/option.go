@@ -3,23 +3,26 @@ package gorm
 import (
 	"time"
 
+	log "github.com/eric-tech01/simple-log"
+
+	"github.com/eric-tech01/taurus/pkg/conf"
 	"github.com/spf13/cast"
 	"gorm.io/gorm"
 )
 
 // StdConfig 标准配置，规范配置文件头
 func StdConfig(name string) *Config {
-	return RawConfig("taorus.mysql." + name)
+	return RawConfig(name)
 }
 
 // RawConfig 传入mapstructure格式的配置
 func RawConfig(key string) *Config {
 	config := DefaultConfig()
 	config.Name = key
-
-	// if err := cfg.UnmarshalKey(key, &config, cfg.TagName("toml")); err != nil {
-	// 	slog.Panic("unmarshal config ", err, key)
-	// }
+	err := conf.UnmarshalKey(key, config)
+	if err != nil {
+		log.Panic(err)
+	}
 
 	return config
 }

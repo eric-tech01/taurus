@@ -66,3 +66,9 @@ func GetInt64(key string) int64 {
 func GetStringMap(key string) map[string]interface{} {
 	return Get(key).(*toml.Tree).ToMap()
 }
+
+// UnmarshalKey takes a single key and unmarshal it into a Struct.
+func UnmarshalKey(key string, rawVal interface{}) error {
+	value := Get(key).(*toml.Tree)
+	return value.Unmarshal(rawVal)
+}

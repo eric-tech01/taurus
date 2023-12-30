@@ -9,6 +9,7 @@ import (
 	version "github.com/eric-tech01/simple-version"
 	"github.com/eric-tech01/taurus"
 	conf "github.com/eric-tech01/taurus/pkg/conf"
+	"github.com/eric-tech01/taurus/pkg/store/gorm"
 	"github.com/eric-tech01/taurus/server"
 	"github.com/gin-gonic/gin"
 )
@@ -20,6 +21,7 @@ type Engine struct {
 func main() {
 	eng := &Engine{}
 	if err := eng.Startup(
+		eng.initDB,
 		eng.printLog,
 		eng.serverHttp,
 	); err != nil {
@@ -74,5 +76,32 @@ func (eng *Engine) printLog() error {
 			time.Sleep(3 * time.Second)
 		}
 	}()
+	return nil
+}
+
+type testModel struct {
+	Id       int    `json:"id" gorm:"primaryKey"`
+	Name     string `json:"name"`
+	CreateAt string `json:"createAt"`
+}
+
+func (testModel) TableName() string {
+	return "test_user"
+}
+
+func (eng *Engine) initDB() error {
+	gormDB := gorm.StdConfig("taurus_mysql").MustBuild()
+	models := []interface{}{
+		&testModel{},
+	}
+	// gormDB.SingularTable(true)
+	gormDB.Set("gorm:table_options", "ENGINE=InnoDB").AutoMigrate(models...)
+	gormDB.Create(&testModel{
+		Name: "jupiter",
+	})
+
+	var user testModel
+	gormDB.Where("id = 1").Find(&user)
+	log.Info("user is:", user.Name)
 	return nil
 }
