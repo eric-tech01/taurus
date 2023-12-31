@@ -1,4 +1,4 @@
-## Taurus [![GoDoc](https://pkg.go.dev/badge/github.com/eric-tech01/taurus)](https://pkg.go.dev/github.com/eric-tech01/taurus@v0.1.1)
+## Taurus [![GoDoc](https://pkg.go.dev/badge/github.com/eric-tech01/taurus)](https://pkg.go.dev/github.com/eric-tech01/taurus@v0.1.4)
 
      _(_____)_
     |__.___.__|
