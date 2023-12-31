@@ -14,4 +14,4 @@ LDFLAGS = " \
 -X 'github.com/eric-tech01/simple-version.CommitId=${CommitId}'"
 
 all:
-	go build -ldflags ${LDFLAGS} -o main_${VERSION}.exe .
+	go build -ldflags ${LDFLAGS} -o Taurus_Example_${VERSION}.exe .

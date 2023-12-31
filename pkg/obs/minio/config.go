@@ -1,4 +1,4 @@
-package obs
+package minio
 
 import (
 	"context"
@@ -31,7 +31,7 @@ func StdConfig(key string) *Config {
 }
 
 func (config Config) Build() *MinioClient {
-	c := &MinioClient{}
+	c := &MinioClient{config:config}
 	var err error
 	c.ctx, c.cancel = context.WithCancel(context.Background())
 	c.client, err = minio.New(config.Endpoint, &minio.Options{

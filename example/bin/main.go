@@ -8,7 +8,9 @@ import (
 	log "github.com/eric-tech01/simple-log"
 	version "github.com/eric-tech01/simple-version"
 	"github.com/eric-tech01/taurus"
+	"github.com/eric-tech01/taurus/example/lib/obs"
 	conf "github.com/eric-tech01/taurus/pkg/conf"
+	"github.com/eric-tech01/taurus/pkg/obs/minio"
 	"github.com/eric-tech01/taurus/pkg/store/gorm"
 	"github.com/eric-tech01/taurus/server"
 	"github.com/gin-gonic/gin"
@@ -22,6 +24,7 @@ func main() {
 	eng := &Engine{}
 	if err := eng.Startup(
 		eng.initDB,
+		eng.initObs,
 		eng.printLog,
 		eng.serverHttp,
 	); err != nil {
@@ -103,5 +106,11 @@ func (eng *Engine) initDB() error {
 	var user testModel
 	gormDB.Where("id = 1").Find(&user)
 	log.Info("user is:", user.Name)
+	return nil
+}
+
+func (eng *Engine) initObs() error {
+	mc := minio.StdConfig("taurus_minio").Build()
+	obs.SetObjectStore(mc)
 	return nil
 }

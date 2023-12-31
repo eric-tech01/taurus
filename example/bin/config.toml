@@ -1,6 +1,6 @@
 
 [database_sqlite]
-  DB = "base.db"
+  DB = "taurus.db"
 [taurus_mysql]
   connMaxLifetime = "300s"
   debug = true
@@ -9,11 +9,11 @@
   maxIdleConns = 50
   maxOpenConns = 100
 [taurus_minio] 
-  Domain = "192.168.0.132"  #对外的域名
-  Endpoint = "127.0.0.1" # 对内连接 地址
+  Domain = "10.0.8.2:9010"  #对外的域名
+  Endpoint = "10.0.8.2:9010" # 对内连接 地址
   AccessKeyID = "ak"
   SecretAccessKey = "sk"
-  UseSSL = true
+  UseSSL = false
 [taurus_log_default]
   Compress = true
   FileName = "./logs/taurus.log"
