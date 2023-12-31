@@ -2,6 +2,7 @@ package minio
 
 import (
 	"context"
+	"io"
 	"os"
 
 	log "github.com/eric-tech01/simple-log"
@@ -29,8 +30,11 @@ func (c *MinioClient) UploadFile(filePath string, bucket string, keyName string)
 		log.Error(err.Error())
 		return err
 	}
+	return c.UploadFromReader(c.ctx, bucket, keyName, file, fileStat.Size())
+}
 
-	info, err := c.client.PutObject(c.ctx, bucket, keyName, file, fileStat.Size(), minio.PutObjectOptions{ContentType: "application/octet-stream"})
+func (c *MinioClient) UploadFromReader(ctx context.Context, bucketName, objectName string, reader io.Reader, objectSize int64) error {
+	info, err := c.client.PutObject(c.ctx, bucketName, objectName, reader, objectSize, minio.PutObjectOptions{ContentType: "application/octet-stream"})
 	if err != nil {
 		log.Error(err.Error())
 		return err
