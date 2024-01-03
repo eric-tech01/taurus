@@ -1,0 +1,7 @@
+<<<<<<< HEAD
+=======
+
+.vscode
+example/logs
+example/bin/*.exe
+>>>>>>> 77ba2bfdca9ed5075c7da8e280dc51f313ebb496

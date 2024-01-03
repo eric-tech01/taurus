@@ -1,0 +1,27 @@
+
+[database_sqlite]
+  DB = "taurus.db"
+[taurus_mysql]
+  connMaxLifetime = "300s"
+  debug = true
+  dsn = "root:haishen@tcp(10.0.8.2:3306)/taurus_db?charset=utf8&parseTime=True&loc=Local&readTimeout=1s&timeout=1s&writeTimeout=3s"
+  level = "panic"
+  maxIdleConns = 50
+  maxOpenConns = 100
+[taurus_minio] 
+  Domain = "10.0.8.2:9010"  #对外的域名
+  Endpoint = "10.0.8.2:9010" # 对内连接 地址
+  AccessKeyID = "ak"
+  SecretAccessKey = "sk"
+  UseSSL = false
+[taurus_log_default]
+  Compress = true
+  FileName = "./logs/taurus.log"
+  Level = "info"
+  LocalTime = true
+  MaxBackups = 1
+  MaxSizeInMB = 10
+
+[taurus_server_http]
+  Host = "0.0.0.0"
+  Port = 8090
