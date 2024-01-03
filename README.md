@@ -1,4 +1,4 @@
-## Taurus [![GoDoc](https://pkg.go.dev/badge/github.com/eric-tech01/taurus)](https://pkg.go.dev/github.com/eric-tech01/taurus@v0.1.4)
+## Taurus [![GoDoc](https://pkg.go.dev/badge/github.com/eric-tech01/taurus)](https://pkg.go.dev/github.com/eric-tech01/taurus@v0.1.1)
 
      _(_____)_
     |__.___.__|
@@ -18,6 +18,17 @@ To be updated...
 ## Requirements
 
 - Go version >= 1.18
+
+## TODO
+
+- [x] base http server
+- [x] support rolling logger
+- [x] support toml config file by `--config` param
+- [x] toml support format `taurus.database.mysql`(Only support taurus_mysql format)
+- [x] go compile version api support (by makefile ldflags)
+- [x] mysql support
+- [ ] support obs (minio api)
+- [ ] cron support
 
 ## Quick Start
 
